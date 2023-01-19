@@ -1,0 +1,23 @@
+
+Normalizing training sets
+	- putting the features on a similar scale
+	- Cost function is easier to optimize
+
+Vanishing or exploding gradients
+	- w > I explodes activations with a deeper network
+	- w < I vanishes activation with a deeper network
+	
+	Solution
+	- set Wl = np.random.randn(shape) * np.sqrt(2/n^(l-1))
+
+Numerical approximation
+
+Gradient check for a neural network
+	- Reshape w and b into one giant parmater
+
+Gradient checking implementation notes
+	- Dont use in training-only to debug
+	- If algorithm fails grad chek, look at the components to try to indentify the bug
+	- Remember regularization
+	- Doesn't work with dropout
+	- Run at random initialization; perhaps again after some training 
